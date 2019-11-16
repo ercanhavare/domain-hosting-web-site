@@ -25,10 +25,9 @@ Route::get('/iletisim', 'PageController@contactIndex');
 
 Auth::routes();
 
-
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::prefix('/admin/')->group(function () {
+Route::prefix('/admin/')->middleware('auth')->group(function () {
     Route::resource('web-packet','WebPacketController');
     Route::resource('about','AboutController');
     Route::resource('domain-name','DomainNameController');
@@ -36,7 +35,3 @@ Route::prefix('/admin/')->group(function () {
     Route::resource('server-packet','ServerPacketController');
     Route::resource('contact','ContactController');
 });
-
-
-
-
