@@ -37,13 +37,6 @@
                                                               alt="https://unsplash.com/@sapegin"></div>
                             <div class="blog_post_content">
                                 <div class="blog_post_title"><a href="#">Kurumsal Firma Scripti</a></div>
-                                <div class="blog_post_info">
-                                    <ul class="d-flex flex-row align-items-center justify-content-start">
-                                        <li><a href="#">July 12, 2018</a></li>
-                                        <li><a href="#">By Admin</a></li>
-                                        <li><a href="#">3 Comments</a></li>
-                                    </ul>
-                                </div>
                                 <div class="blog_post_text">
                                     <p>Creative Business Kurumsal Firma Scripti ile firma, kurum ya da kuruşunuzun
                                         etkileyici, ilgi çekici ve akılda kalıcı bir web sitesi olsun.

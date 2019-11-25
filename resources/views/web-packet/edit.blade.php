@@ -11,9 +11,9 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="x_panel">
                         <div class="x_title">
-                            <h2>Responsive example<small>Users</small></h2>
+                            <h2>Web Packet Düzenle ( Yazılımlar )</h2>
                             <ul class="nav navbar-right panel_toolbox">
-                                <li><a href="{{url('admin/web-packet/')}}"><i class="fa fa-code"></i> Web Hosting</a>
+                                <li><a href="{{url('admin/web-packet/')}}"><i class="fa fa-code"></i> Web Packet</a>
                                 </li>
                             </ul>
                             <div class="clearfix"></div>
@@ -22,10 +22,10 @@
 
                             <form method="POST" action="{{route('web-packet.update',$webPacket->id)}}"
                                   class="form-horizontal form-label-left">
-                                @csrf @method('PUT')
+                                @csrf @method("PUT")
 
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name <span
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Paket Adı <span
                                             class="required">*</span>
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
@@ -42,7 +42,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="price">Price ( TL ) <span
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="price">Fiyat ( TL ) <span
                                             class="required">*</span>
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
@@ -59,7 +59,24 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="description" class="control-label col-md-3 col-sm-3 col-xs-12">Description</label>
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="file_image">Resim <span
+                                            class="required">*</span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input id="file_image" type="file"
+                                               class="form-control col-md-7 col-xs-12 @error('file_image') is-invalid @enderror"
+                                               name="file_image" value="{{ $webPacket->file_image }}" required autocomplete="file_image"
+                                               autofocus style="padding: 10px 10px 40px;">
+
+                                        @error('file_image')
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="description" class="control-label col-md-3 col-sm-3 col-xs-12">Açıklama *</label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
 
                                         <textarea id="desc" required="required"  class="form-control @error('desc') is-invalid @enderror"
@@ -75,16 +92,14 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                         @enderror
-
                                     </div>
-
                                 </div>
 
                                 <div class="form-group">
-                                    <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                                        <button class="btn btn-primary" type="button">Cancel</button>
-                                        <button class="btn btn-primary" type="reset">Reset</button>
-                                        <button type="submit" class="btn btn-success">Submit</button>
+                                    <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3" style="float: right">
+                                        <button class="btn btn-primary" type="button">İptal</button>
+                                        <button class="btn btn-primary" type="reset">Temizle</button>
+                                        <button type="submit" class="btn btn-success">Kaydet</button>
                                     </div>
                                 </div>
 
