@@ -17,7 +17,7 @@ class PageController extends Controller
 
     public function hakkimizdaIndex()
     {
-        $about = About::query()->first();
+        $about = About::query()->firstOrFail();
         return view('about', compact('about'));
     }
 

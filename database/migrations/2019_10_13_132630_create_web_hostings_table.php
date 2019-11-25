@@ -15,19 +15,27 @@ class CreateWebHostingsTable extends Migration
     {
         Schema::create('web_hostings', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('host_os');
+            /* $table->string('host_os');
+             $table->string('title');
+             $table->string('web_space');
+             $table->string('web_permission');
+             $table->string('traffic');
+             $table->string('e_mail');
+             $table->string('sub_domain');
+             $table->string('domain_redirect');
+             $table->string('database');
+             $table->string('panel');
+             $table->string('support');
+             $table->string('ftp');
+             $table->string('reseller');*/
             $table->string('title');
+            $table->string('price');
+            $table->string('host');
+            $table->string('email');
             $table->string('web_space');
-            $table->string('web_permission');
-            $table->string('traffic');
-            $table->string('e_mail');
-            $table->string('sub_domain');
-            $table->string('domain_redirect');
-            $table->string('database');
-            $table->string('panel');
             $table->string('support');
-            $table->string('ftp');
-            $table->string('reseller');
+            $table->string('database');
+            $table->string('reseller')->nullable();
             $table->timestamps();
         });
     }

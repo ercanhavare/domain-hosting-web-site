@@ -13,7 +13,7 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="x_panel">
                         <div class="x_title">
-                            <h2>{{$serverPacket->name}}</h2>
+                            <h2>Server Packet - {{$serverPacket->name}}</h2>
                             <ul class="nav navbar-right panel_toolbox">
                                 <li><a href="{{url('admin/server-packet/')}}"><i class="fa fa-server"></i> Server Packet</a>
                                 </li>
@@ -22,13 +22,11 @@
                             </ul>
                             <div class="clearfix"></div>
                         </div>
-                        <div class="x_content">
+                        <div class="x_content table-responsive">
 
-                            <table id="datatable-responsive"
-                                   class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0"
-                                   width="100%">
+                            <table class="table table-striped table-bordered dt-responsive nowrap show-table">
 
-                                <tr>
+                            <tr>
                                     <td>ID</td>
                                     <td><p>{{$serverPacket->id}}</p></td>
                                 </tr>

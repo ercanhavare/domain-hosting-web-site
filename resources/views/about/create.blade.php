@@ -11,7 +11,7 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="x_panel">
                         <div class="x_title">
-                            <h2>Responsive example<small>Users</small></h2>
+                            <h2>Hakkımızda</h2>
                             <ul class="nav navbar-right panel_toolbox">
                                 <li><a href="{{url('admin/about/')}}"><i class="fa fa-desktop"></i> Kurumsal</a>
                                 </li>
@@ -20,7 +20,8 @@
                         </div>
                         <div class="x_content">
 
-                            <form method="POST" action="{{route('about.store')}}" class="form-horizontal form-label-left">
+                            <form method="POST" action="{{route('about.store')}}"
+                                  class="form-horizontal form-label-left">
                                 @csrf
 
                                 <div class="form-group">
@@ -42,10 +43,12 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="desc" class="control-label col-md-3 col-sm-3 col-xs-12">Description</label>
+                                    <label for="desc"
+                                           class="control-label col-md-3 col-sm-3 col-xs-12">Description</label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
 
-                                        <textarea id="desc" required="required"  class="form-control @error('desc') is-invalid @enderror"
+                                        <textarea id="desc" required="required"
+                                                  class="form-control @error('desc') is-invalid @enderror"
                                                   autofocus
                                                   name="desc"
                                                   data-parsley-trigger="keyup" data-parsley-minlength="20"

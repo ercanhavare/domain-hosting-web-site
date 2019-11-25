@@ -17,7 +17,7 @@ class WebHostingController extends Controller
     public function index()
     {
         $webHosting = WebHosting::all();
-        return view('web-hosting.index',compact('webHosting'));
+        return view('web-hosting.index', compact('webHosting'));
     }
 
     /**
@@ -40,7 +40,7 @@ class WebHostingController extends Controller
     {
         try {
             WebHosting::create([
-                'host_os' => $request->input('host_os'),
+                /*'host_os' => $request->input('host_os'),
                 'title' => $request->input('title'),
                 'web_space' => $request->input('web_space'),
                 'web_permission' => $request->input('web_permission'),
@@ -52,6 +52,14 @@ class WebHostingController extends Controller
                 'panel' => $request->input('panel'),
                 'support' => $request->input('support'),
                 'ftp' => $request->input('ftp'),
+                'reseller' => $request->input('reseller'),*/
+                'title' => $request->input('title'),
+                'price' => $request->input('price'),
+                'host' => $request->input('host'),
+                'email' => $request->input('email'),
+                'web_space' => $request->input('web_space'),
+                'support' => $request->input('support'),
+                'database' => $request->input('database'),
                 'reseller' => $request->input('reseller'),
             ]);
             return redirect('/admin/web-hosting')->with('success', 'Kayıt ekleme işlemi başarıyla gerçekleştirildi.');
@@ -93,18 +101,26 @@ class WebHostingController extends Controller
     public function update(Request $request, WebHosting $webHosting)
     {
         try {
-            $webHosting->host_os = $request->input('host_os');
+            /* $webHosting->host_os = $request->input('host_os');
+             $webHosting->title = $request->input('title');
+             $webHosting->web_space = $request->input('web_space');
+             $webHosting->web_permission = $request->input('web_permission');
+             $webHosting->traffic = $request->input('traffic');
+             $webHosting->e_mail = $request->input('e_mail');
+             $webHosting->sub_domain = $request->input('sub_domain');
+             $webHosting->domain_redirect = $request->input('domain_redirect');
+             $webHosting->database = $request->input('database');
+             $webHosting->panel = $request->input('panel');
+             $webHosting->support = $request->input('support');
+             $webHosting->ftp = $request->input('ftp');
+             $webHosting->reseller = $request->input('reseller');*/
             $webHosting->title = $request->input('title');
+            $webHosting->price = $request->input('price');
+            $webHosting->host = $request->input('host');
+            $webHosting->email = $request->input('email');
             $webHosting->web_space = $request->input('web_space');
-            $webHosting->web_permission = $request->input('web_permission');
-            $webHosting->traffic = $request->input('traffic');
-            $webHosting->e_mail = $request->input('e_mail');
-            $webHosting->sub_domain = $request->input('sub_domain');
-            $webHosting->domain_redirect = $request->input('domain_redirect');
-            $webHosting->database = $request->input('database');
-            $webHosting->panel = $request->input('panel');
             $webHosting->support = $request->input('support');
-            $webHosting->ftp = $request->input('ftp');
+            $webHosting->database = $request->input('database');
             $webHosting->reseller = $request->input('reseller');
             $webHosting->update();
             return redirect('/admin/web-hosting')->with('success', 'Kayıt güncelleme işlemi başarıyla gerçekleştirildi.');

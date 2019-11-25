@@ -11,7 +11,7 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="x_panel">
                         <div class="x_title">
-                            <h2>{{$webPacket->name}}</h2>
+                            <h2>Web Packet ( Yazılımlar ) - {{$webPacket->name}}</h2>
                             <ul class="nav navbar-right panel_toolbox">
                                 <li><a href="{{url('admin/web-packet/')}}"><i class="fa fa-code"></i> Web Packet</a>
                                 </li>
@@ -37,7 +37,7 @@
                                 </tr>
                                 <tr>
                                     <td>Resim</td>
-                                    <td><p>{{$webPacket->price}}</p></td>
+                                    <td><p><img src="{{$webPacket->file_image}}" alt=""></p></td>
                                 </tr>
                                 <tr>
                                     <td>Açıklama</td>

@@ -11,7 +11,7 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="x_panel">
                         <div class="x_title">
-                            <h2>Responsive example<small>Users</small></h2>
+                            <h2>Web Hosting</h2>
                             <ul class="nav navbar-right panel_toolbox">
                                 <li><a href="{{url('admin/web-hosting/')}}"><i class="fa fa-adjust"></i> Web Hosting</a>
                                 </li>
@@ -25,25 +25,8 @@
                                 @csrf
 
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="host_os">Host OS <span
-                                            class="required">*</span>
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input id="host_os" type="text"
-                                               class="form-control col-md-7 col-xs-12 @error('host_os') is-invalid @enderror"
-                                               name="host_os" value="{{ old('host_os') }}" required autocomplete="host_os"
-                                               autofocus>
-
-                                        @error('host_os')
-                                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                        @enderror
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="price">Title <span
-                                            class="required">*</span>
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="title">Başlık<span
+                                            class="required"> *</span>
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <input id="title" type="text"
@@ -60,8 +43,62 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="web_space">Web Space <span
-                                            class="required">*</span>
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="price">Fiyat<span
+                                            class="required"> * ( TL )</span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input id="price" type="text"
+                                               class="form-control col-md-7 col-xs-12 @error('price') is-invalid @enderror"
+                                               name="price" value="{{ old('price') }}" required autocomplete="price"
+                                               autofocus>
+
+                                        @error('price')
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="host">Host<span
+                                            class="required"> *</span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input id="host" type="text"
+                                               class="form-control col-md-7 col-xs-12 @error('host') is-invalid @enderror"
+                                               name="host" value="{{ old('host') }}" required autocomplete="host"
+                                               autofocus>
+
+                                        @error('host')
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">E-mail<span
+                                            class="required"> *</span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input id="email" type="text"
+                                               class="form-control col-md-7 col-xs-12 @error('email') is-invalid @enderror"
+                                               name="email" value="{{ old('email') }}" required autocomplete="email"
+                                               autofocus>
+
+                                        @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="web_space">Web Alanı<span
+                                            class="required"> *</span>
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <input id="web_space" type="text"
@@ -76,136 +113,10 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="price">Web Permission <span
-                                            class="required">*</span>
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input id="web_permission" type="text"
-                                               class="form-control col-md-7 col-xs-12 @error('web_permission') is-invalid @enderror"
-                                               name="web_permission" value="{{ old('web_permission') }}" required autocomplete="web_permission"
-                                               autofocus>
-
-                                        @error('web_permission')
-                                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                        @enderror
-                                    </div>
-                                </div>
-
 
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="traffic">Traffic <span
-                                            class="required">*</span>
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input id="traffic" type="text"
-                                               class="form-control col-md-7 col-xs-12 @error('traffic') is-invalid @enderror"
-                                               name="traffic" value="{{ old('traffic') }}" required autocomplete="traffic"
-                                               autofocus>
-
-                                        @error('traffic')
-                                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                        @enderror
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="e_mail">E-mail <span
-                                            class="required">*</span>
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input id="e_mail" type="text"
-                                               class="form-control col-md-7 col-xs-12 @error('e_mail') is-invalid @enderror"
-                                               name="e_mail" value="{{ old('e_mail') }}" required autocomplete="e_mail"
-                                               autofocus>
-
-                                        @error('e_mail')
-                                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                        @enderror
-                                    </div>
-                                </div>
-
-
-                                <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="sub_domain">Sub-domain <span
-                                            class="required">*</span>
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input id="sub_domain" type="text"
-                                               class="form-control col-md-7 col-xs-12 @error('sub_domain') is-invalid @enderror"
-                                               name="sub_domain" value="{{ old('sub_domain') }}" required autocomplete="sub_domain"
-                                               autofocus>
-
-                                        @error('sub_domain')
-                                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                        @enderror
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="price">Domain Redirect <span
-                                            class="required">*</span>
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input id="domain_redirect" type="text"
-                                               class="form-control col-md-7 col-xs-12 @error('domain_redirect') is-invalid @enderror"
-                                               name="domain_redirect" value="{{ old('domain_redirect') }}" required autocomplete="domain_redirect"
-                                               autofocus>
-
-                                        @error('domain_redirect')
-                                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                        @enderror
-                                    </div>
-                                </div>
-
-
-                                <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="database">Database <span
-                                            class="required">*</span>
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input id="database" type="text"
-                                               class="form-control col-md-7 col-xs-12 @error('database') is-invalid @enderror"
-                                               name="database" value="{{ old('database') }}" required autocomplete="database"
-                                               autofocus>
-
-                                        @error('database')
-                                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                        @enderror
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="panel">Panel <span
-                                            class="required">*</span>
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input id="panel" type="text"
-                                               class="form-control col-md-7 col-xs-12 @error('panel') is-invalid @enderror"
-                                               name="panel" value="{{ old('panel') }}" required autocomplete="panel"
-                                               autofocus>
-
-                                        @error('panel')
-                                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                        @enderror
-                                    </div>
-                                </div>
-
-
-                                <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="support">Support <span
-                                            class="required">*</span>
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="support">Destek<span
+                                            class="required"> *</span>
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <input id="support" type="text"
@@ -220,17 +131,18 @@
                                         @enderror
                                     </div>
                                 </div>
+
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="ftp">Ftp <span
-                                            class="required">*</span>
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="database">Database<span
+                                            class="required"> *</span>
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input id="ftp" type="text"
-                                               class="form-control col-md-7 col-xs-12 @error('ftp') is-invalid @enderror"
-                                               name="ftp" value="{{ old('ftp') }}" required autocomplete="ftp"
+                                        <input id="database" type="text"
+                                               class="form-control col-md-7 col-xs-12 @error('database') is-invalid @enderror"
+                                               name="database" value="{{ old('database') }}" required autocomplete="database"
                                                autofocus>
 
-                                        @error('ftp')
+                                        @error('database')
                                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -238,15 +150,13 @@
                                     </div>
                                 </div>
 
-
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="reseller">Reseller <span
-                                            class="required">*</span>
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="reseller">Reseller
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <input id="reseller" type="text"
                                                class="form-control col-md-7 col-xs-12 @error('reseller') is-invalid @enderror"
-                                               name="reseller" value="{{ old('reseller') }}" required autocomplete="reseller"
+                                               name="reseller" value="{{ old('reseller') }}"  autocomplete="reseller"
                                                autofocus>
 
                                         @error('reseller')

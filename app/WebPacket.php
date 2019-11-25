@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property mixed name
  * @property mixed price
  * @property mixed desc
+ * @property mixed file_image
  */
 class WebPacket extends Model
 {

@@ -13,20 +13,19 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="x_panel">
                         <div class="x_title">
-                            <h2>{{$webHosting->host_os}}</h2>
+                            <h2>Web hosting - {{$webHosting->host_os}}</h2>
                             <ul class="nav navbar-right panel_toolbox">
                                 <li><a href="{{url('admin/web-hosting/')}}"><i class="fa fa-adjust"></i> Web Hosting</a>
                                 </li>
-                                <li><a href="{{url('admin/web-hosting/'.$webHosting->id.'/edit')}}"><i class="fa fa-edit"></i> Düzenle</a>
+                                <li><a href="{{url('admin/web-hosting/'.$webHosting->id.'/edit')}}"><i
+                                            class="fa fa-edit"></i> Düzenle</a>
                                 </li>
                             </ul>
                             <div class="clearfix"></div>
                         </div>
-                        <div class="x_content">
+                        <div class="x_content table-responsive">
 
-                            <table id="datatable-responsive"
-                                   class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0"
-                                   width="100%">
+                            <table class="table table-striped table-bordered dt-responsive nowrap show-table">
 
                                 <tr>
                                     <td>ID</td>

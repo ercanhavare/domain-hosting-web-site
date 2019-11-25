@@ -11,7 +11,7 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="x_panel">
                         <div class="x_title">
-                            <h2>Web Packet Düzenle ( Yazılımlar )</h2>
+                            <h2>Web Packet ( Yazılımlar )</h2>
                             <ul class="nav navbar-right panel_toolbox">
                                 <li><a href="{{url('admin/web-packet/')}}"><i class="fa fa-code"></i> Web Packet</a>
                                 </li>
@@ -20,7 +20,7 @@
                         </div>
                         <div class="x_content">
 
-                            <form method="POST" action="{{route('web-packet.update',$webPacket->id)}}"
+                            <form method="POST" action="{{route('web-packet.update',$webPacket->id)}}" enctype="multipart/form-data"
                                   class="form-horizontal form-label-left">
                                 @csrf @method("PUT")
 
@@ -60,12 +60,12 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="file_image">Resim <span
-                                            class="required">*</span>
+                                            class="required"></span>
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <input id="file_image" type="file"
                                                class="form-control col-md-7 col-xs-12 @error('file_image') is-invalid @enderror"
-                                               name="file_image" value="{{ $webPacket->file_image }}" required autocomplete="file_image"
+                                               name="file_image" value="{{ $webPacket->file_image }}" autocomplete="file_image"
                                                autofocus style="padding: 10px 10px 40px;">
 
                                         @error('file_image')

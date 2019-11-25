@@ -11,7 +11,7 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="x_panel">
                         <div class="x_title">
-                            <h2>Web Packet Olustur ( Yazılımlar )</h2>
+                            <h2>Web Packet ( Yazılımlar )</h2>
                             <ul class="nav navbar-right panel_toolbox">
                                 <li><a href="{{url('admin/web-packet/')}}"><i class="fa fa-code"></i> Web Packet</a>
                                 </li>
@@ -20,7 +20,7 @@
                         </div>
                         <div class="x_content">
 
-                            <form method="POST" action="{{route('web-packet.store')}}"
+                            <form method="POST" action="{{route('web-packet.store')}}" enctype="multipart/form-data"
                                   class="form-horizontal form-label-left">
                                 @csrf
 
@@ -42,7 +42,8 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="price">Fiyat ( TL ) <span
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="price">Fiyat ( TL )
+                                        <span
                                             class="required">*</span>
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
@@ -59,13 +60,15 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="file-image">Resim <span
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="file_image">Resim (
+                                        756 x 322 ) <span
                                             class="required">*</span>
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input id="file-image" type="file"
-                                               class="form-control col-md-7 col-xs-12 @error('file-image') is-invalid @enderror"
-                                               name="file-image" value="{{ old('file-image') }}" required autocomplete="file-image"
+                                        <input id="file_image" type="file"
+                                               class="form-control col-md-7 col-xs-12 @error('file_image') is-invalid @enderror"
+                                               name="file_image" value="{{ old('file_image') }}" required
+                                               autocomplete="file_image"
                                                autofocus style="padding: 10px 10px 40px;">
 
                                         @error('file-image')
@@ -76,10 +79,12 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="description" class="control-label col-md-3 col-sm-3 col-xs-12">Açıklama *</label>
+                                    <label for="description" class="control-label col-md-3 col-sm-3 col-xs-12">Açıklama
+                                        *</label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
 
-                                        <textarea id="desc" required="required"  class="form-control @error('desc') is-invalid @enderror"
+                                        <textarea id="desc" required="required"
+                                                  class="form-control @error('desc') is-invalid @enderror"
                                                   autofocus
                                                   name="desc"
                                                   data-parsley-trigger="keyup" data-parsley-minlength="20"
