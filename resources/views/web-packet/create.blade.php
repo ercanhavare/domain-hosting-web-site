@@ -29,16 +29,12 @@
                                             class="required">*</span>
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input id="name" type="text"
-                                               class="form-control col-md-7 col-xs-12 @error('name') is-invalid @enderror"
-                                               name="name" value="{{ old('name') }}" required autocomplete="name"
-                                               autofocus>
+                                        <select name="name" class="form-control col-md-7 col-xs-12" required>
+                                            @foreach($packet_names as $packet_name)
+                                                <option value="{{$packet_name->id}}">{{$packet_name->packet_name}}</option>
+                                                @endforeach
+                                        </select>
 
-                                        @error('name')
-                                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                        @enderror
                                     </div>
                                 </div>
                                 <div class="form-group">

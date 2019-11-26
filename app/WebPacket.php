@@ -16,4 +16,9 @@ use Illuminate\Database\Eloquent\Model;
 class WebPacket extends Model
 {
     protected $guarded = [];
+
+    public function packetNames()
+    {
+        return $this->hasMany(PacketName::class);
+    }
 }

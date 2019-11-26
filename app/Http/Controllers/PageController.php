@@ -7,17 +7,21 @@ use App\Contact;
 use App\DomainName;
 use App\ServerPacket;
 use App\WebHosting;
+use App\WebPacket;
 
 class PageController extends Controller
 {
     public function yazilimlarIndex()
     {
-        return view('web-packet');
+        $web_packets = WebPacket::query()->get();
+        $count_web_packets = $web_packets->count();
+
+        return view('web-packet',compact('web_packets','count_web_packets'));
     }
 
     public function hakkimizdaIndex()
     {
-        $about = About::query()->firstOrFail();
+        $about = About::all();
         return view('about', compact('about'));
     }
 
@@ -42,6 +46,6 @@ class PageController extends Controller
     public function contactIndex()
     {
         $contact = Contact::query()->first();
-        return view('contact',compact('contact'));
+        return view('contact', compact('contact'));
     }
 }

@@ -30,10 +30,10 @@
             <div class="row">
                 <div class="col">
                     <div class="section_title_container text-center">
-                        <div class="section_title"><h2>Paket 4 size</h2></div>
-                        <div class="section_subtitle">Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune
+                        <div class="section_title"><h2>Web Host</h2></div>
+                        <div class="section_subtitle">{{--Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune
                             kitabı oluşturmak üzere
-                            bir yazı ...
+                            bir yazı ..--}}.
                         </div>
                     </div>
                 </div>
@@ -66,76 +66,115 @@
                                         </defs>
                                     </svg>
                                 </div>
-                                <div class="pricing_title">beginner</div>
-                                <div class="pricing_price">Free
-                                    <div>Always</div>
+                                <div class="pricing_title">{{$server_packet->name}}</div> {{--begiiner--}}
+                                <div class="pricing_price">{{$server_packet->price}} TL {{--free--}}
+{{--                                    <div>{{$server_packet->host}}</div> --}}{{--host--}}
                                 </div>
                             </div>
                             <div class="pricing_content d-flex flex-column align-items-center justify-content-start">
                                 <div class="pricing_list">
                                     <ul class="d-flex flex-column align-items-center justify-content-start">
-                                        <li class="d-flex flex-row align-items-center justify-content-start">
-                                            <div
-                                                class="pricing_icon d-flex flex-column align-items-center justify-content-center">
-                                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                                     viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px"
-                                                     height="26px">
-                                                    <path class="check_svg trans_200"
-                                                          d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z"
-                                                          fill="#606ef1"></path>
-                                                </svg>
-                                            </div>
-                                            <div>2 E-mail Addresess</div>
-                                        </li>
-                                        <li class="d-flex flex-row align-items-center justify-content-start">
-                                            <div
-                                                class="pricing_icon d-flex flex-column align-items-center justify-content-center">
-                                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                                     viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px"
-                                                     height="26px">
-                                                    <path class="check_svg trans_200"
-                                                          d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z"
-                                                          fill="#606ef1"></path>
-                                                </svg>
-                                            </div>
-                                            <div>25 GB Space</div>
-                                        </li>
-                                        <li class="d-flex flex-row align-items-center justify-content-start">
-                                            <div
-                                                class="pricing_icon d-flex flex-column align-items-center justify-content-center">
-                                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                                     viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px"
-                                                     height="26px">
-                                                    <path class="check_svg trans_200"
-                                                          d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z"
-                                                          fill="#606ef1"></path>
-                                                </svg>
-                                            </div>
-                                            <div>24h Live Support</div>
-                                        </li>
-                                        <li class="d-flex flex-row align-items-center justify-content-start">
-                                            <div
-                                                class="pricing_icon d-flex flex-column align-items-center justify-content-center">
-                                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                                     viewBox="0 0 26 26"
-                                                     enable-background="new 0 0 26 26" width="26px" height="26px">
-                                                    <path class="check_svg trans_200"
-                                                          d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z"
-                                                          fill="#606ef1"></path>
-                                                </svg>
-                                            </div>
-                                            <div>Documetation inside</div>
-                                        </li>
-                                        <li class="d-flex flex-row align-items-center justify-content-start">
-                                            <div>X</div>
-                                            <div>SEO Plan</div>
-                                        </li>
+                                        @if($server_packet->cpu)
+                                            <li class="d-flex flex-row align-items-center justify-content-start">
+                                                <div
+                                                    class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                         viewBox="0 0 26 26" enable-background="new 0 0 26 26"
+                                                         width="26px"
+                                                         height="26px">
+                                                        <path class="check_svg trans_200"
+                                                              d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z"
+                                                              fill="#606ef1"></path>
+                                                    </svg>
+                                                </div>
+                                                <div>{{$server_packet->cpu}} CPU{{--2 E-mail Addresess--}}</div>
+                                            </li>
+                                        @endif
+
+                                        @if($server_packet->ram)
+                                            <li class="d-flex flex-row align-items-center justify-content-start">
+                                                <div
+                                                    class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                         viewBox="0 0 26 26" enable-background="new 0 0 26 26"
+                                                         width="26px"
+                                                         height="26px">
+                                                        <path class="check_svg trans_200"
+                                                              d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z"
+                                                              fill="#606ef1"></path>
+                                                    </svg>
+                                                </div>
+                                                <div>{{$server_packet->ram}} GB {{--25 GB Space--}}</div>
+                                            </li>
+                                        @endif
+                                        @if($server_packet->name)
+                                            <li class="d-flex flex-row align-items-center justify-content-start">
+                                                <div
+                                                    class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                         viewBox="0 0 26 26" enable-background="new 0 0 26 26"
+                                                         width="26px"
+                                                         height="26px">
+                                                        <path class="check_svg trans_200"
+                                                              d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z"
+                                                              fill="#606ef1"></path>
+                                                    </svg>
+                                                </div>
+                                                <div>7/24 Canlı Destek{{--24h Live Support--}}</div>
+                                            </li>
+                                        @endif
+                                        @if($server_packet->hdd)
+                                            <li class="d-flex flex-row align-items-center justify-content-start">
+                                                <div
+                                                    class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                         viewBox="0 0 26 26"
+                                                         enable-background="new 0 0 26 26" width="26px" height="26px">
+                                                        <path class="check_svg trans_200"
+                                                              d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z"
+                                                              fill="#606ef1"></path>
+                                                    </svg>
+                                                </div>
+                                                <div>{{$server_packet->hdd}} GB Alan{{--Documetation inside--}}</div>
+                                            </li>
+                                        @endif
+                                        @if($server_packet->internet)
+                                            <li class="d-flex flex-row align-items-center justify-content-start">
+                                                <div
+                                                    class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                         viewBox="0 0 26 26"
+                                                         enable-background="new 0 0 26 26" width="26px" height="26px">
+                                                        <path class="check_svg trans_200"
+                                                              d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z"
+                                                              fill="#606ef1"></path>
+                                                    </svg>
+                                                </div>
+                                                <div>{{$server_packet->internet}} GB Internet{{--SEO Plan--}}</div>
+                                            </li>
+                                        @endif
+                                            @if($server_packet->traffic)
+                                                <li class="d-flex flex-row align-items-center justify-content-start">
+                                                    <div
+                                                        class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                                             viewBox="0 0 26 26"
+                                                             enable-background="new 0 0 26 26" width="26px" height="26px">
+                                                            <path class="check_svg trans_200"
+                                                                  d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z"
+                                                                  fill="#606ef1"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <div>{{$server_packet->traffic}} GB Traffic{{--SEO Plan--}}</div>
+                                                </li>
+                                            @endif
+
                                     </ul>
                                 </div>
                                 <div class="pricing_info"><a href="#">
                                         <div>i</div>
                                     </a></div>
-                                <div class="button pricing_button trans_200"><a href="#">order plan</a></div>
+                                <div class="button pricing_button trans_200"><a href="#">Satın Al</a></div>
                             </div>
                         </div>
                     </div>
@@ -145,8 +184,8 @@
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
                     <div class="pricing_text text-center">
-                        <p>Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir
-                            yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri </p>
+                        <p>{{--Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir
+                            yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri --}}</p>
                     </div>
                 </div>
             </div>

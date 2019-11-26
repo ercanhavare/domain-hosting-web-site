@@ -46,19 +46,19 @@
                                     <div>
                                         <div>Adres</div>
                                     </div>
-                                    <div>{{$contact->address}}</div>
+                                    <div>@if(isset($contact->address)){{$contact->address}}@endif</div>
                                 </li>
                                 <li class="d-flex flex-row align-items-start justify-content-start">
                                     <div>
                                         <div>Telefon</div>
                                     </div>
-                                    <div>{{$contact->telephone}}</div>
+                                    <div>@if(isset($contact->telephone)){{$contact->telephone}}@endif</div>
                                 </li>
                                 <li class="d-flex flex-row align-items-start justify-content-start">
                                     <div>
                                         <div>E-mail</div>
                                     </div>
-                                    <div>{{$contact->email}}</div>
+                                    <div>@if(isset($contact->email)){{$contact->email}}@endif</div>
                                 </li>
                             </ul>
                         </div>

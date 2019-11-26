@@ -3,7 +3,7 @@
         <div>Yardıma mı ihtiyacınız var? 24/7 Bizi Arayın</div>
         <div class="d-flex flex-row align-items-center justify-content-start">
             <i class="fa fa-phone" aria-hidden="true"></i>
-            <div>652-345 3222 11</div>
+            <div style="font-size: 28px">@if(isset($contact->telephone)){{$contact->telephone}}@endif</div>
         </div>
     </div>
     <div class="footer_content">
@@ -56,20 +56,20 @@
 
                 <!-- Footer Column -->
                 <div class="col-xl-3 col-md-6">
-                    <div class="logo footer_logo"><a href="#"><span>my</span>Host</a></div>
+                    <div class="logo footer_logo"><a href="#"><span>Pasa</span>Net</a></div>
                     <div class="footer_info">
-                        <ul>
+                        <ul class="pt-2">
                             <li class="d-flex flex-row align-items-start justify-content-start">
-                                <div><div>Adres</div></div>
-                                <div>1481 Creekside Lane Avila Beach, CA 931</div>
+                                <div><div>Adres: </div></div>
+                                <div class="pl-2">@if(isset($contact->address)){{$contact->address}}@endif</div>
                             </li>
                             <li class="d-flex flex-row align-items-start justify-content-start">
-                                <div><div>Telefon</div></div>
-                                <div>+53 345 7953 32453</div>
+                                <div><div>Telefon: </div></div>
+                                <div class="pl-2">@if(isset($contact->telephone)){{$contact->telephone}}@endif</div>
                             </li>
                             <li class="d-flex flex-row align-items-start justify-content-start">
-                                <div><div>E-mail</div></div>
-                                <div>yourmail@gmail.com</div>
+                                <div><div>E-mail: </div></div>
+                                <div class="pl-2">@if(isset($contact->email)){{$contact->email}}@endif</div>
                             </li>
                         </ul>
                     </div>

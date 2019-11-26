@@ -83,11 +83,18 @@
                 <!-- About Content -->
                 <div class="col-lg-6 order-lg-2 order-1">
                     <div class="about_content">
-                        <div class="section_title"><h2>{{$about->title}}</h2></div>
+                        <div class="section_title"><h2>{{isset($about->title)}}</h2></div>
                         <div class="about_text">
-                            <p>{{$about->desc}}</p>
+                            @if(isset($about->desc))
+                                <p>{{isset($about->desc)}}</p>
+                            @else
+                                <p class="pt-5 mt-lg-5"></p>
+                                <p class="pt-5 mt-lg-5">Domain satın alma süreci artık çok daha kolay ve profesyonel!..
+                                    Domain lideri PasaNet ile alan adlarını jet hızıyla ve en iyi fiyatla
+                                    kaydedin!</p>
+                            @endif
                         </div>
-{{--                        <div class="button about_button"><a href="#">daha fazla oku</a></div>--}}
+                        {{--                        <div class="button about_button"><a href="#">daha fazla oku</a></div>--}}
                     </div>
                 </div>
 

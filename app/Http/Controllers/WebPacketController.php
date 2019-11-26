@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\PacketName;
 use App\WebPacket;
 use Exception;
 use Illuminate\Http\RedirectResponse;
@@ -21,7 +22,6 @@ class WebPacketController extends Controller
     public function index()
     {
         $web_packets = WebPacket::query()->get();
-
         return view('web-packet.index', compact('web_packets'));
     }
 
@@ -32,7 +32,8 @@ class WebPacketController extends Controller
      */
     public function create()
     {
-        return view('web-packet.create');
+        $packet_names = PacketName::query()->get();
+        return view('web-packet.create',compact('packet_names'));
     }
 
     /**
