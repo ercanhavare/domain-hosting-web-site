@@ -15,10 +15,12 @@ class CreateWebPacketsTable extends Migration
     {
         Schema::create('web_packets', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
+            $table->unsignedBigInteger('packet_name_id');
             $table->string('price');
             $table->text('desc');
             $table->timestamps();
+
+            $table->foreign('packet_name_id')->references('id')->on('packet_names');
         });
     }
 

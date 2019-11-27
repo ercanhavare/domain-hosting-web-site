@@ -30,28 +30,28 @@
                 <!-- Blog Posts -->
                 <div class="col-lg-8">
                     <div class="blog_posts">
-                    @foreach($web_packets as $web_packet)
+                    @forelse($web_packets as $web_packet)
                         <!-- Blog Post -->
                             <div class="blog_post">
                                 <div class="blog_post_image"><img src="{{$web_packet->file_image}}"
                                                                   alt="https://unsplash.com/@sapegin"></div>
                                 <div class="blog_post_content">
-                                    <div class="blog_post_title"><a href="#">{{$web_packet->name}}</a></div>
+                                    <div class="blog_post_title"><a
+                                            href="#">{{$web_packet->packetNames->packet_name}}</a></div>
                                     <div class="blog_post_text">
                                         <p>{{$web_packet->desc}}
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                        @endforeach
+
+                        @empty
+                            <div class="section_title">
+                                <p>{{"Herhangi bir kayıt bulunmamaktadır."}}</p></div>
+
+                        @endforelse
                     </div>
-                    <div class="page_nav">
-                        <ul class="d-flex flex-row align-items-start justify-content-start">
-                            <li class="active"><a href="#">01.</a></li>
-                            <li><a href="#">02.</a></li>
-                            <li><a href="#">03.</a></li>
-                        </ul>
-                    </div>
+
                 </div>
 
                 <!-- Sidebar -->
@@ -69,30 +69,15 @@
                                                 <div class="ml-auto">({{$count_web_packets}})</div>
                                             </div>
                                         </a></li>
-                                    <li><a href="#">
-                                            <div class="d-flex flex-row align-items-start justify-content-start">
-                                                <div>Kurumsal Firma Scriptleri</div>
-                                                <div class="ml-auto">(12)</div>
-                                            </div>
-                                        </a></li>
-                                    <li><a href="#">
-                                            <div class="d-flex flex-row align-items-start justify-content-start">
-                                                <div>Rent a Car Scrıptleri</div>
-                                                <div class="ml-auto">(16)</div>
-                                            </div>
-                                        </a></li>
-                                    <li><a href="#">
-                                            <div class="d-flex flex-row align-items-start justify-content-start">
-                                                <div>Nakliyat Scriptleri</div>
-                                                <div class="ml-auto">(19)</div>
-                                            </div>
-                                        </a></li>
-                                    <li><a href="#">
-                                            <div class="d-flex flex-row align-items-start justify-content-start">
-                                                <div>Restaurant - Cafe - Lokanta</div>
-                                                <div class="ml-auto">(12)</div>
-                                            </div>
-                                        </a></li>
+
+                                    @foreach($web_packets as $web_packet)
+                                        <li><a href="#">
+                                                <div class="d-flex flex-row align-items-start justify-content-start">
+                                                    <div>{{$web_packet->packetNames->packet_name}}</div>
+                                                    <div class="ml-auto"></div>
+                                                </div>
+                                            </a></li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>

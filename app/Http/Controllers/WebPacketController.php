@@ -22,6 +22,7 @@ class WebPacketController extends Controller
     public function index()
     {
         $web_packets = WebPacket::query()->get();
+
         return view('web-packet.index', compact('web_packets'));
     }
 
@@ -33,7 +34,7 @@ class WebPacketController extends Controller
     public function create()
     {
         $packet_names = PacketName::query()->get();
-        return view('web-packet.create',compact('packet_names'));
+        return view('web-packet.create', compact('packet_names'));
     }
 
     /**
@@ -59,7 +60,7 @@ class WebPacketController extends Controller
 
         try {
             WebPacket::create([
-                'name' => $request->input('name'),
+                'packet_name_id' => $request->input('name'),
                 'price' => $request->input('price'),
                 'desc' => $request->input('desc'),
                 'file_image' => $path
@@ -89,7 +90,10 @@ class WebPacketController extends Controller
      */
     public function edit(WebPacket $webPacket)
     {
-        return view('web-packet.edit', compact('webPacket'));
+        $webPacket->load('packetNames');
+        $packet_names = PacketName::query()->get();
+
+        return view('web-packet.edit', compact('webPacket','packet_names'));
     }
 
     /**
@@ -117,7 +121,7 @@ class WebPacketController extends Controller
         }
 
         try {
-            $webPacket->name = $request->input('name');
+            $webPacket->packet_name_id = $request->input('name');
             $webPacket->price = $request->input('price');
             $webPacket->desc = $request->input('desc');
             $webPacket->file_image = $path;

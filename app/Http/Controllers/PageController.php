@@ -5,18 +5,21 @@ namespace App\Http\Controllers;
 use App\About;
 use App\Contact;
 use App\DomainName;
+use App\PacketName;
 use App\ServerPacket;
 use App\WebHosting;
 use App\WebPacket;
+use Illuminate\Support\Facades\DB;
 
 class PageController extends Controller
 {
     public function yazilimlarIndex()
     {
         $web_packets = WebPacket::query()->get();
+
         $count_web_packets = $web_packets->count();
 
-        return view('web-packet',compact('web_packets','count_web_packets'));
+        return view('web-packet', compact('web_packets', 'count_web_packets'));
     }
 
     public function hakkimizdaIndex()

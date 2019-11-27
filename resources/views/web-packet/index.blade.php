@@ -41,7 +41,7 @@
                                 @foreach($web_packets as $web_packet)
                                     <tr>
                                         <td>{{$web_packet->id}}</td>
-                                        <td>{{$web_packet->name}}</td>
+                                        <td>{{$web_packet->packetNames->packet_name}}</td>
                                         <td>{{$web_packet->price}}</td>
                                         <td>
                                             <a href="{{url('/admin/web-packet/'.$web_packet->id)}}">

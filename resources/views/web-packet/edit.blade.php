@@ -20,7 +20,8 @@
                         </div>
                         <div class="x_content">
 
-                            <form method="POST" action="{{route('web-packet.update',$webPacket->id)}}" enctype="multipart/form-data"
+                            <form method="POST" action="{{route('web-packet.update',$webPacket->id)}}"
+                                  enctype="multipart/form-data"
                                   class="form-horizontal form-label-left">
                                 @csrf @method("PUT")
 
@@ -29,26 +30,24 @@
                                             class="required">*</span>
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input id="name" type="text"
-                                               class="form-control col-md-7 col-xs-12 @error('name') is-invalid @enderror"
-                                               name="name" value="{{ $webPacket->name }}" required autocomplete="name"
-                                               autofocus>
-
-                                        @error('name')
-                                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                        @enderror
+                                        <select name="name" class="form-control col-md-7 col-xs-12" required>
+                                            @foreach($packet_names as $packet_name)
+                                                <option value="{{$packet_name->id}}"
+                                                        @if($packet_name->id == $webPacket->packetNames->id) selected="selected" @endif>{{$packet_name->packet_name}}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="price">Fiyat ( TL ) <span
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="price">Fiyat ( TL )
+                                        <span
                                             class="required">*</span>
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <input id="price" type="number"
                                                class="form-control col-md-7 col-xs-12 @error('price') is-invalid @enderror"
-                                               name="price" value="{{ $webPacket->price }}" required autocomplete="price"
+                                               name="price" value="{{ $webPacket->price }}" required
+                                               autocomplete="price"
                                                autofocus>
 
                                         @error('price')
@@ -59,13 +58,15 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="file_image">Resim <span
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="file_image">Resim
+                                        <span
                                             class="required"></span>
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <input id="file_image" type="file"
                                                class="form-control col-md-7 col-xs-12 @error('file_image') is-invalid @enderror"
-                                               name="file_image" value="{{ $webPacket->file_image }}" autocomplete="file_image"
+                                               name="file_image" value="{{ $webPacket->file_image }}"
+                                               autocomplete="file_image"
                                                autofocus style="padding: 10px 10px 40px;">
 
                                         @error('file_image')
@@ -76,10 +77,12 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="description" class="control-label col-md-3 col-sm-3 col-xs-12">Açıklama *</label>
+                                    <label for="description" class="control-label col-md-3 col-sm-3 col-xs-12">Açıklama
+                                        *</label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
 
-                                        <textarea id="desc" required="required"  class="form-control @error('desc') is-invalid @enderror"
+                                        <textarea id="desc" required="required"
+                                                  class="form-control @error('desc') is-invalid @enderror"
                                                   autofocus
                                                   name="desc"
                                                   data-parsley-trigger="keyup" data-parsley-minlength="20"

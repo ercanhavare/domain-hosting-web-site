@@ -30,7 +30,7 @@
             <div class="row">
                 <div class="col">
                     <div class="section_title_container text-center">
-                        <div class="section_title"><h2>Web Host</h2></div>
+                        <div class="section_title">@if(count($web_hostings) == 0) <p>{{"Herhangi bir kayıt bulunmamaktadır."}}</p>@endif</div>
                         <div class="section_subtitle">{{--Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune
                             kitabı oluşturmak üzere
                             bir yazı ..--}}.

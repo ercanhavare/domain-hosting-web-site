@@ -29,7 +29,7 @@
                                 </tr>
                                 <tr>
                                     <td>Paket Adı</td>
-                                    <td><p>{{$webPacket->name}}</p></td>
+                                    <td><p>{{$webPacket->packetNames->packet_name}}</p></td>
                                 </tr>
                                 <tr>
                                     <td>Fiyat(TL)</td>
