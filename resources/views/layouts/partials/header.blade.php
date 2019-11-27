@@ -9,7 +9,6 @@
                             <li class="active"><a href="{{'/'}}">Anasayfa</a></li>
                             <li><a href="{{'yazilimlar'}}">Yazılımlar</a></li>
                             <li><a href="{{'hakkimizda'}}">Hakkımızda</a></li>
-                            <li><a href="{{'blog'}}">Blog</a></li>
                             <li><a href="{{'alan-adi'}}">Alan Adı</a></li>
                             <li><a href="{{'web-hosting'}}">Web Hosting</a></li>
                             <li><a href="{{'sunucu'}}">Sunucu</a></li>
