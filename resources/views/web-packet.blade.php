@@ -53,7 +53,6 @@
                     </div>
 
                 </div>
-
                 <!-- Sidebar -->
                 <div class="col-lg-4">
                     <div class="sidebar">
