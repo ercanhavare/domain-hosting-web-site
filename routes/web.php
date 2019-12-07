@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/', 'PageController@welcome');
 Route::get('/yazilimlar', 'PageController@yazilimlarIndex');
 Route::get('/hakkimizda', 'PageController@hakkimizdaIndex');
 Route::get('/alan-adi', 'PageController@alanAdiIndex');
@@ -22,6 +19,7 @@ Route::get('/web-hosting', 'PageController@webHostingIndex');
 Route::get('/sunucu', 'PageController@serverPacketIndex');
 Route::get('/iletisim', 'PageController@contactIndex');
 
+Route::post('/ara', 'DomainAvaibilityController@searchDomain')->name('searchDomain');
 
 Auth::routes();
 

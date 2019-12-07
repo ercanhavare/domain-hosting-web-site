@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\DB;
 
 class PageController extends Controller
 {
+    public function welcome()
+    {
+        return view('welcome');
+    }
+
     public function yazilimlarIndex()
     {
         $web_packets = WebPacket::query()->get();
