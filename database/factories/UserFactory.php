@@ -22,6 +22,7 @@ $factory->define(User::class, function (Faker $faker) {
         'email' => 'admin@pasanetwork.com',
         'email_verified_at' => now(),
         'password' => bcrypt('admin'), // password
+        'is_admin' => 1,
         'remember_token' => Str::random(10),
     ];
 });

@@ -24,13 +24,23 @@
         <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
             <div class="menu_section">
                 <ul class="nav side-menu">
-                    <li><a href="{{url('/home')}}"><i class="fa fa-home"></i> Home </a></li>
-                    <li><a href="{{url('/admin/web-packet')}}"><i class="fa fa-code"></i> Web Packet </a></li>
-                    <li><a href="{{url('/admin/about')}}"><i class="fa fa-desktop"></i> Kurumsal </a></li>
-                    <li><a href="{{url('/admin/domain-name')}}"><i class="fa fa-table"></i> Alan Adı </a></li>
-                    <li><a href="{{url('/admin/web-hosting')}}"><i class="fa fa-adjust"></i> Web Hosting </a></li>
-                    <li><a href="{{url('/admin/server-packet')}}"><i class="fa fa-server"></i> Server Packet</a></li>
-                    <li><a href="{{url('/admin/contact')}}"><i class="fa fa-bookmark"></i> İletişim </a></li>
+                    @if(auth()->user()->is_admin == '1')
+                        <li><a href="{{url('/home')}}"><i class="fa fa-home"></i> Anasayfa </a></li>
+                        <li><a href="{{url('/admin/web-packet')}}"><i class="fa fa-code"></i> Web Packet </a></li>
+                        <li><a href="{{url('/admin/about')}}"><i class="fa fa-desktop"></i> Kurumsal </a></li>
+                        <li><a href="{{url('/admin/domain-name')}}"><i class="fa fa-table"></i> Alan Adı </a></li>
+                        <li><a href="{{url('/admin/web-hosting')}}"><i class="fa fa-adjust"></i> Web Hosting </a></li>
+                        <li><a href="{{url('/admin/server-packet')}}"><i class="fa fa-server"></i> Server Packet</a>
+                        </li>
+                        <li><a href="{{url('/admin/contact')}}"><i class="fa fa-bookmark"></i> İletişim </a></li>
+                    @endif
+                    {{-- üye --}}
+                    @if(auth()->user()->is_admin == '0')
+                        <li><a href="{{url('/home')}}"><i class="fa fa-home"></i> Anasayfa </a></li>
+                        <li><a href="{{url('/admin/domain-name')}}"><i class="fa fa-home"></i> Alan Adı </a></li>
+                        <li><a href="{{url('/admin/web-hosting')}}"><i class="fa fa-home"></i> Hosting </a></li>
+                        <li><a href="{{url('/admin/server-packet')}}"><i class="fa fa-home"></i> Sunucu</a></li>
+                    @endif
                 </ul>
             </div>
 
