@@ -23,24 +23,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <div class="domain_search">
-                            <div class="domain_search_background"></div>
-                            <div class="domain_search_overlay"></div>
-                            <form action="#" class="domain_search_form" id="domain_search_form">
-                                <input type="text" class="domain_search_input" placeholder="Etki alanı adınız"
-                                       required="required">
-                                <div
-                                    class="domain_search_dropdown d-flex flex-row align-items-center justify-content-center">
-                                    <div class="domain_search_selected">.com</div>
-                                    <ul>
-                                        <li>.com</li>
-                                        <li>.io</li>
-                                        <li>.net</li>
-                                    </ul>
-                                </div>
-                                <button class="domain_search_button">Ara</button>
-                            </form>
-                        </div>
+                       @include('domain-search')
                     </div>
                 </div>
             </div>

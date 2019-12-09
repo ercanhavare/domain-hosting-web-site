@@ -170,7 +170,7 @@
 
                                     </ul>
                                 </div>
-                                <div class="pricing_info"><a href="#">
+                                <div class="pricing_info"><a href="{{'login'}}">
                                         <div>i</div>
                                     </a></div>
                                 <div class="button pricing_button trans_200"><a href="#">Satın Al</a></div>

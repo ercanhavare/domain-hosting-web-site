@@ -13,6 +13,7 @@
                             <li><a href="{{'web-hosting'}}">Web Hosting</a></li>
                             <li><a href="{{'sunucu'}}">Sunucu</a></li>
                             <li><a href="{{'iletisim'}}">İletişim</a></li>
+                            <li><a href="{{'login'}}">Panel</a></li>
                         </ul>
                     </nav>
                 </div>
